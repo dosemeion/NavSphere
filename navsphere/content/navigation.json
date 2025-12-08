@@ -6,7 +6,16 @@
       "icon": "FolderKanban",
       "description": "",
       "enabled": true,
-      "items": [],
+      "items": [
+        {
+          "id": "site_1765175730463_vwux9yr3v",
+          "title": "Google学术搜索",
+          "href": "https://scholar.google.com.hk/",
+          "description": "",
+          "icon": "/assets/favicon_1765175704336.ico",
+          "enabled": true
+        }
+      ],
       "subCategories": []
     },
     {
