@@ -37,22 +37,23 @@ function getData() {
   // 过滤导航数据（保持不变）
   const isEnabled = (item: any): boolean => item?.enabled !== false
 
+  // 过滤只显示启用的分类和网站
   const filteredNavigationData = {
     navigationItems: navigationData.navigationItems
-      .filter(isEnabled)
+      .filter(category => (category as any).enabled !== false) // 过滤启用的分类
       .map(category => {
         const filteredSubCategories = category.subCategories
-          ? category.subCategories
-              .filter(isEnabled)
+          ? (category.subCategories as any[])
+              .filter(sub => sub.enabled !== false) // 过滤启用的子分类
               .map(sub => ({
                 ...sub,
-                items: Array.isArray(sub.items) ? sub.items.filter(isEnabled) : []
+                items: sub.items?.filter((item: any) => item.enabled !== false) // 过滤启用的网站
               }))
-          : []
-
+          : undefined
+        
         return {
           ...category,
-          items: Array.isArray(category.items) ? category.items.filter(isEnabled) : [],
+          items: category.items?.filter(item => item.enabled !== false), // 过滤启用的网站
           subCategories: filteredSubCategories
         }
       })
