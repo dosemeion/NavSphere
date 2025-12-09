@@ -1,0 +1,52 @@
+{
+    "engines": [
+      {
+        "id": "bing",
+        "name": "必应",
+        "nameEn": "Bing",
+        "url": "https://www.bing.com/search?q={query}",
+        "icon": "bing",
+        "enabledByDefault": false
+      },
+      {
+        "id": "baidu",
+        "name": "百度",
+        "nameEn": "Baidu",
+        "url": "https://www.baidu.com/s?wd={query}",
+        "icon": "baidu",
+        "enabledByDefault": false
+      },
+      {
+        "id": "googlescholar",
+        "name": "谷歌学术",
+        "nameEn": "Google Scholar",
+        "url": "https://scholar.google.com.hk/scholar?q={query}",
+        "icon": "graduation-cap",
+        "enabledByDefault": false
+      },
+      {
+        "id": "google",
+        "name": "Google",
+        "nameEn": "Google",
+        "url": "https://www.google.com/search?q={query}",
+        "icon": "google",
+        "enabledByDefault": true
+      },
+      {
+        "id": "github",
+        "name": "GitHub",
+        "nameEn": "GitHub",
+        "url": "https://github.com/search?q={query}",
+        "icon": "github",
+        "enabledByDefault": false
+      },
+      { 
+        "id": "arXiv",
+        "name": "arXiv",
+        "nameEn": "arXiv",
+        "url": "https://arxiv.org/search/?query={query}&searchtype=all&abstracts=show&order=-announced_date_first&size=50",
+        "icon": "arXiv",
+        "enabledByDefault": false
+      }
+    ]
+  }
