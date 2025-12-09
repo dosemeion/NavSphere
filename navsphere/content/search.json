@@ -6,7 +6,7 @@
         "nameEn": "Bing",
         "url": "https://www.bing.com/search?q={query}",
         "icon": "bing",
-        "enabledByDefault": false
+        "enabledByDefault": true
       },
       {
         "id": "baidu",
@@ -30,7 +30,7 @@
         "nameEn": "Google",
         "url": "https://www.google.com/search?q={query}",
         "icon": "google",
-        "enabledByDefault": true
+        "enabledByDefault": false
       },
       {
         "id": "github",
