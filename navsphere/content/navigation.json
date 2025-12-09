@@ -46,6 +46,14 @@
           "description": "",
           "icon": "/assets/arxiv.com-favicon.ico",
           "enabled": true
+        },
+        {
+          "id": "6",
+          "title": "overleaf",
+          "href": "https://www.overleaf.com/project/",
+          "description": "",
+          "icon": "/assets/icon-overleaf.com.ico",
+          "enabled": true
         }
         
       ],
