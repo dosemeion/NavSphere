@@ -154,6 +154,14 @@
           "description": "",
           "icon": "/assets/youku.com-favicon.ico",
           "enabled": true
+        },
+        {
+          "id": "6",
+          "title": "斗鱼",
+          "href": "https://www.douyu.com/g_LOL/",
+          "description": "",
+          "icon": "/assets/douyu.com-favicon.ico",
+          "enabled": true
         }
       ]
     },
