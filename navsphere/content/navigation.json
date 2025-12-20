@@ -156,6 +156,23 @@
           "enabled": true
         }
       ]
+    },
+    {
+      "id": "4",
+      "title": "其他",
+      "icon": "FolderKanban",
+      "description": "",
+      "enabled": true,
+      "items": [
+        {
+          "id": "1",
+          "title": "cloudflare",
+          "href": "https://dash.cloudflare.com/",
+          "description": "",
+          "icon": "/assets/cloudflare.com-favicon.ico",
+          "enabled": true
+        }
+      ]
     }
   ]
 }
