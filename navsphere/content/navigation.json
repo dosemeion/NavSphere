@@ -54,10 +54,108 @@
           "description": "",
           "icon": "/assets/icon-overleaf.com.ico",
           "enabled": true
+        },
+        {
+          "id": "7",
+          "title": "huggingface",
+          "href": "https://huggingface.co/",
+          "description": "",
+          "icon": "/assets/huggingface.co-favicon.ico",
+          "enabled": true
         }
         
       ],
       "subCategories": []
+    },
+    {
+      "id": "2",
+      "title": "工具",
+      "icon": "FolderKanban",
+      "description": "",
+      "enabled": true,
+      "items": [
+        {
+          "id": "1",
+          "title": "Qwen",
+          "href": "https://chat.qwen.ai/",
+          "description": "",
+          "icon": "/assets/chat.qwen.ai-favicon.ico",
+          "enabled": true
+        },
+        {
+          "id": "2",
+          "title": "豆包",
+          "href": "https://www.doubao.com/",
+          "description": "",
+          "icon": "/assets/doubao.com-favicon.ico",
+          "enabled": true
+        },
+        {
+          "id": "3",
+          "title": "文心一言",
+          "href": "https://www.yiyan.baidu.com/",
+          "description": "",
+          "icon": "/assets/yiyan.baidu.com-favicon.ico",
+          "enabled": true
+        },
+        {
+          "id": "4",
+          "title": "专利之星",
+          "href": "https://patentstar.com.cn/Search/Index/",
+          "description": "",
+          "icon": "/assets/patentstar.com-favicon-large.ico",
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "title": "娱乐",
+      "icon": "FolderKanban",
+      "description": "",
+      "enabled": true,
+      "items": [
+        {
+          "id": "1",
+          "title": "抖音",
+          "href": "https://www.douyin.com/?recommend=1/",
+          "description": "",
+          "icon": "/assets/douyin.com-favicon.ico",
+          "enabled": true
+        },
+        {
+          "id": "2",
+          "title": "爱奇艺",
+          "href": "https://www.bilibili.com/",
+          "description": "",
+          "icon": "/assets/iqiyi.com-favicon.ico",
+          "enabled": true
+        },
+        {
+          "id": "3",
+          "title": "哔哩哔哩",
+          "href": "https://www.bilibili.com/",
+          "description": "",
+          "icon": "/assets/bilibili.com-favicon.ico",
+          "enabled": true
+        },
+        {
+          "id": "4",
+          "title": "腾讯视频",
+          "href": "https://v.qq.com/",
+          "description": "",
+          "icon": "/assets/v.qq.com-favicon.ico",
+          "enabled": true
+        },
+        {
+          "id": "5",
+          "title": "优酷",
+          "href": "https://www.youku.com/",
+          "description": "",
+          "icon": "/assets/youku.com-favicon.ico",
+          "enabled": true
+        }
+      ]
     }
   ]
 }

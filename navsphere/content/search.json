@@ -47,6 +47,14 @@
         "url": "https://arxiv.org/search/?query={query}&searchtype=all&abstracts=show&order=-announced_date_first&size=50",
         "icon": "arXiv",
         "enabledByDefault": false
+      },
+      {
+        "id": "iconfont",
+        "name": "IconFont",
+        "nameEn": "IconFont",
+        "url": "https://www.iconfont.cn/search/index?searchType=icon&q={query}",
+        "icon": "iconfont",
+        "enabledByDefault": false
       }
     ]
   }
