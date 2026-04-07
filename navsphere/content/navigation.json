@@ -95,7 +95,7 @@
           "title": "GEM论文解读",
           "href": "https://gemini.google.com/gem/d21fe78ce4fd",
           "description": "",
-          "icon": "/assets/gemini.google.com-favicon.ico",
+          "icon": "/assets/gemini.google.com-favicon-large.ico",
           "enabled": true
         },
         {
@@ -178,6 +178,14 @@
           "href": "https://dash.cloudflare.com/",
           "description": "",
           "icon": "/assets/cloudflare.com-favicon.ico",
+          "enabled": true
+        },
+        {
+          "id": "2",
+          "title": "cloudflare",
+          "href": "https://favicon.im/zh/",
+          "description": "",
+          "icon": "/assets/favicon.im-favicon-large.ico",
           "enabled": true
         }
       ]
