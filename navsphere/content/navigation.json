@@ -92,10 +92,10 @@
         },
         {
           "id": "3",
-          "title": "文心一言",
-          "href": "https://www.yiyan.baidu.com/",
+          "title": "GEM论文解读",
+          "href": "https://gemini.google.com/gem/d21fe78ce4fd",
           "description": "",
-          "icon": "/assets/yiyan.baidu.com-favicon.ico",
+          "icon": "/assets/gemini.google.com-favicon.ico",
           "enabled": true
         },
         {

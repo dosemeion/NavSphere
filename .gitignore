@@ -47,3 +47,4 @@ cache/
 .next/cache/
 dist/cache/
 build/cache/
+.claude/
