@@ -92,8 +92,8 @@
         },
         {
           "id": "3",
-          "title": "GEM论文解读",
-          "href": "https://gemini.google.com/gem/d21fe78ce4fd",
+          "title": "Gemini",
+          "href": "https://gemini.google.com/app",
           "description": "",
           "icon": "/assets/gemini.google.com-favicon-large.ico",
           "enabled": true
