@@ -100,6 +100,14 @@
         },
         {
           "id": "4",
+          "title": "GLM",
+          "href": "https://chat.z.ai/",
+          "description": "",
+          "icon": "/assets/chat.z.ai-favicon.ico",
+          "enabled": true
+        },
+        {
+          "id": "5",
           "title": "专利之星",
           "href": "https://www.patentstar.com.cn/Search/Index/",
           "description": "",
