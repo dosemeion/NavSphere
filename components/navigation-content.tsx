@@ -1,11 +1,10 @@
 'use client'
 
-import { useState, useMemo } from 'react'
-import type { NavigationData, NavigationItem, NavigationSubItem } from '@/types/navigation'
+import { useState } from 'react'
+import type { NavigationData } from '@/types/navigation'
 import type { SiteConfig } from '@/types/site'
 import { NavigationCard } from '@/components/navigation-card'
 import { Sidebar } from '@/components/sidebar'
-import { SearchBar } from '@/components/search-bar'
 import { ModeToggle } from '@/components/mode-toggle'
 import { Footer } from '@/components/footer'
 import { Github, HelpCircle, Puzzle } from 'lucide-react'
@@ -21,88 +20,6 @@ interface NavigationContentProps {
 
 export function NavigationContent({ navigationData, siteData }: NavigationContentProps) {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false)
-  const [searchQuery, setSearchQuery] = useState('')
-
-  // 修复类型检查和搜索逻辑
-  const searchResults = useMemo(() => {
-    const query = searchQuery.toLowerCase().trim()
-    if (!query) return []
-
-    const results: Array<{
-      category: NavigationItem
-      items: (NavigationItem | NavigationSubItem)[]
-      subCategories: Array<{
-        title: string
-        items: (NavigationItem | NavigationSubItem)[]
-      }>
-    }> = []
-
-    navigationData.navigationItems.forEach(category => {
-      // 搜索主分类下的项目（只搜索启用的）
-      const items = (category.items || []).filter(item => {
-        if (item.enabled === false) return false
-        const titleMatch = item.title.toLowerCase().includes(query)
-        const descMatch = item.description?.toLowerCase().includes(query)
-        return titleMatch || descMatch
-      })
-
-      // 搜索子分类下的项目（只搜索启用的）
-      const subResults: Array<{
-        title: string
-        items: (NavigationItem | NavigationSubItem)[]
-      }> = []
-
-      if (category.subCategories) {
-        category.subCategories.forEach(sub => {
-          if (sub.enabled === false) return
-          const subItems = (sub.items || []).filter(item => {
-            if (item.enabled === false) return false
-            const titleMatch = item.title.toLowerCase().includes(query)
-            const descMatch = item.description?.toLowerCase().includes(query)
-            return titleMatch || descMatch
-          })
-
-          if (subItems.length > 0) {
-            subResults.push({
-              title: sub.title,
-              items: subItems
-            })
-          }
-        })
-      }
-
-      // 只有当主分类或子分类有匹配结果时才添加到结果中
-      if (items.length > 0 || subResults.length > 0) {
-        results.push({
-          category,
-          items,
-          subCategories: subResults
-        })
-      }
-    })
-
-    // 调试信息
-    if (query && results.length > 0) {
-      console.log('搜索结果:', {
-        query,
-        totalResults: results.length,
-        results: results.map(r => ({
-          category: r.category.title,
-          mainItems: r.items.length,
-          subCategories: r.subCategories.map(s => ({
-            title: s.title,
-            items: s.items.length
-          }))
-        }))
-      })
-    }
-
-    return results
-  }, [navigationData, searchQuery])
-
-  const handleSearch = (query: string) => {
-    setSearchQuery(query)
-  }
 
   return (
     <div className="flex flex-col sm:flex-row min-h-screen">
@@ -132,69 +49,58 @@ export function NavigationContent({ navigationData, siteData }: NavigationConten
 
       <main className="flex-1">
         <div className="sticky top-0 bg-background/90 backdrop-blur-sm z-30 px-3 sm:px-6 py-2">
-          <div className="flex items-center gap-3">
-            <div className="flex-1">
-              <SearchBar
-                navigationData={navigationData}
-                onSearch={handleSearch}
-                searchResults={searchResults}
-                searchQuery={searchQuery}
-                siteConfig={siteData}
-              />
-            </div>
-            <div className="flex items-center gap-1">
-              <ModeToggle />
-              <Link
-                href="https://github.com/dosemeion/NavSphere"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="访问 GitHub 仓库"
-              >
-                <Button
-                  variant="ghost"
-                  size="icon"
-                  className="hover:bg-accent hover:text-accent-foreground"
-                >
-                  <Github className="h-5 w-5" />
-                </Button>
-              </Link>
-              <Link
-                href="https://github.com/tianyaxiang/navsphere-extension"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="下载浏览器插件"
-              >
-                <Button
-                  variant="ghost"
-                  size="icon"
-                  className="hover:bg-accent hover:text-accent-foreground"
-                >
-                  <Puzzle className="h-5 w-5" />
-                </Button>
-              </Link>
-              <Link
-                href="https://mp.weixin.qq.com/s/90LUmKilfLZfc5L63Ej3Sg"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="查看帮助文档"
-              >
-                <Button
-                  variant="ghost"
-                  size="icon"
-                  className="hover:bg-accent hover:text-accent-foreground"
-                >
-                  <HelpCircle className="h-5 w-5" />
-                </Button>
-              </Link>
+          <div className="flex items-center justify-end gap-1">
+            <ModeToggle />
+            <Link
+              href="https://github.com/dosemeion/NavSphere"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="访问 GitHub 仓库"
+            >
               <Button
                 variant="ghost"
                 size="icon"
-                className="sm:hidden"
-                onClick={() => setIsSidebarOpen(!isSidebarOpen)}
+                className="hover:bg-accent hover:text-accent-foreground"
               >
-                <Menu className="h-5 w-5" />
+                <Github className="h-5 w-5" />
               </Button>
-            </div>
+            </Link>
+            <Link
+              href="https://github.com/tianyaxiang/navsphere-extension"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="下载浏览器插件"
+            >
+              <Button
+                variant="ghost"
+                size="icon"
+                className="hover:bg-accent hover:text-accent-foreground"
+              >
+                <Puzzle className="h-5 w-5" />
+              </Button>
+            </Link>
+            <Link
+              href="https://mp.weixin.qq.com/s/90LUmKilfLZfc5L63Ej3Sg"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="查看帮助文档"
+            >
+              <Button
+                variant="ghost"
+                size="icon"
+                className="hover:bg-accent hover:text-accent-foreground"
+              >
+                <HelpCircle className="h-5 w-5" />
+              </Button>
+            </Link>
+            <Button
+              variant="ghost"
+              size="icon"
+              className="sm:hidden"
+              onClick={() => setIsSidebarOpen(!isSidebarOpen)}
+            >
+              <Menu className="h-5 w-5" />
+            </Button>
           </div>
         </div>
 

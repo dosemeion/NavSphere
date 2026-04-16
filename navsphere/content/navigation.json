@@ -103,7 +103,7 @@
           "title": "GLM",
           "href": "https://chat.z.ai/",
           "description": "",
-          "icon": "/assets/chat.z.ai-favicon.ico",
+          "icon": "/assets/chat.z.svg",
           "enabled": true
         },
         {

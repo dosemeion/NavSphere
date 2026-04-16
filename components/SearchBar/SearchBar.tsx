@@ -78,7 +78,7 @@ export default function SearchBar({ engines }: SearchBarProps) {
   }
 
   return (
-    <div className="w-full max-w-2xl mx-auto mb-6 px-4">
+    <div className="w-full mb-6">
       <div className="bg-white dark:bg-gray-800 rounded-xl shadow-md p-4 border border-gray-200 dark:border-gray-700">
         <form onSubmit={handleSubmit} className="space-y-4">
           <div className="relative">
