@@ -63,7 +63,6 @@
           "icon": "/assets/huggingface.co-favicon.ico",
           "enabled": true
         }
-        
       ],
       "subCategories": []
     },
@@ -112,6 +111,14 @@
           "href": "https://www.patentstar.com.cn/Search/Index/",
           "description": "",
           "icon": "/assets/patentstar.com-favicon-large.ico",
+          "enabled": true
+        },
+        {
+          "id": "site_1778226394773_5tebbdja8",
+          "title": "Chatgpt",
+          "href": "https://chatgpt.com/",
+          "description": "",
+          "icon": "/assets/favicon_1778226382323.png",
           "enabled": true
         }
       ]
